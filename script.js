@@ -1,5 +1,5 @@
 // *** 請將下方的 URL 替換成你在 Google Apps Script 部署後取得的 Web App URL ***
-const GAS_API_URL = "https://script.google.com/macros/s/AKfycbyNLxjjdvHWJEuZ87vOmswzJszq3cy00ZIL1OvIbS1DMm5EczPdp2GlA5zrF5U7lf9Y/exec"; 
+const GAS_API_URL = "https://script.google.com/macros/s/AKfycbypxrDK-smyMGoXADNYUBVkosnX4KU2H3rMaMDg_g9M17bOUH5CzFHEbzhO93RTiEQB/exec"; 
 
 let quizData = [];
 let userAnswers = {}; // 儲存格式: { questionTempId: optionId }
@@ -160,3 +160,4 @@ function submitQuiz() {
     });
 
 }
+
