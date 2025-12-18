@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>船員上船前安全講習測驗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="login-section">
+            <h1>船員上船前安全講習測驗</h1>
+            <p>請輸入資料開始測驗。共 50 題。</p>
+            <form id="login-form">
+                <div class="form-group">
+                    <label>姓名：</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label>船名：</label>
+                    <input type="text" id="ship" required>
+                </div>
+                <div class="form-group">
+                    <label>Email (用於接收成績)：</label>
+                    <input type="email" id="email" required>
+                </div>
+                <button type="submit" id="start-btn">開始測驗</button>
+            </form>
+            <div id="loading-msg" class="hidden">正在從伺服器載入題目，請稍候...</div>
+        </div>
+
+        <div id="quiz-section" class="hidden">
+            <div class="progress-bar">
+                <span id="current-q-num">1</span> / 50
+            </div>
+            <div id="question-container">
+                <h2 id="question-text">題目載入中...</h2>
+                <div id="options-container" class="options-list">
+                    </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <button id="prev-btn" class="secondary-btn" disabled>上一題</button>
+                <button id="next-btn" class="primary-btn">下一題</button>
+                <button id="submit-btn" class="submit-btn hidden">確定交卷</button>
+            </div>
+        </div>
+
+        <div id="finish-section" class="hidden">
+            <h2>測驗結束</h2>
+            <p id="finish-msg">正在計算成績並發送郵件...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
