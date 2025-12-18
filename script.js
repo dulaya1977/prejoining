@@ -1,5 +1,5 @@
 // *** 請將下方的 URL 替換成你在 Google Apps Script 部署後取得的 Web App URL ***
-const GAS_API_URL = "https://script.google.com/macros/s/AKfycbypxrDK-smyMGoXADNYUBVkosnX4KU2H3rMaMDg_g9M17bOUH5CzFHEbzhO93RTiEQB/exec"; 
+const GAS_API_URL = "https://script.google.com/macros/s/AKfycbxMqeaeKJ5LSNKEbpMgS-X6wy3uuKuJ0-Ph1a-l_LZgpT14mMxygQDHXrS-nbBc3Z2h/exec"; 
 
 let quizData = [];
 let userAnswers = {}; // 儲存格式: { questionTempId: optionId }
@@ -115,8 +115,8 @@ function updateButtons() {
 document.getElementById('submit-btn').addEventListener('click', () => {
     // 檢查是否還有未填寫的
     const answeredCount = Object.keys(userAnswers).length;
-    if (answeredCount < 50) {
-        if(!confirm(`你只回答了 ${answeredCount} / 50 題，確定要交卷嗎？`)) {
+    if (answeredCount < 80) {
+        if(!confirm(`你只回答了 ${answeredCount} / 80 題，確定要交卷嗎？`)) {
             return;
         }
     } else {
@@ -160,4 +160,5 @@ function submitQuiz() {
     });
 
 }
+
 
