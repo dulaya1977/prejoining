@@ -1,5 +1,5 @@
 // *** 請將下方的 URL 替換成你在 Google Apps Script 部署後取得的 Web App URL ***
-const GAS_API_URL = "https://script.google.com/macros/s/AKfycbzhBa-TggjHwgNglK_Hwg-RaNd5aJhhKusgyHxEfZuR2l4K3dq47cYyyxstJkEk4tb2/exec"; 
+const GAS_API_URL = "https://script.google.com/macros/s/AKfycbyNLxjjdvHWJEuZ87vOmswzJszq3cy00ZIL1OvIbS1DMm5EczPdp2GlA5zrF5U7lf9Y/exec"; 
 
 let quizData = [];
 let userAnswers = {}; // 儲存格式: { questionTempId: optionId }
@@ -158,4 +158,5 @@ function submitQuiz() {
     .catch(error => {
         finishMsg.textContent = "網路錯誤，無法送出成績。請截圖此畫面聯繫管理員。";
     });
+
 }
